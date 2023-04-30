@@ -6,8 +6,8 @@ def requestInfo(IP:str) -> NodeBody:
     return NodeBody()
 
 #encrypts the bytes with the given IP's private key. 
-def handshake(IP:str, b:bytes):
-    pass
+def handshake(IP:str, b:bytes) -> bytes:
+    return requestInfo(IP).crypto
 
 def getNeighbors(IP:str):
     return requestInfo(IP).neighbors
