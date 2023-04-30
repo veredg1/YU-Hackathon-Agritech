@@ -1,5 +1,6 @@
 from enum import Enum
 from .internetworking import handshake
+import rsa
 
 #three possibilities for what type of node each user is
 class nodetype(Enum):
@@ -16,6 +17,7 @@ class NodeBody:
     demand: dict = {}
     neighbors: list = []
     crypto: bytes = bytes(name, "utf-8")
+    public_key: rsa.key.PublicKey
 
     def addNeighbor(self, IP: str):
         self.crypto = handshake(IP, self.crypto)
