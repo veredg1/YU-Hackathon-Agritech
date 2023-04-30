@@ -8,10 +8,11 @@ home.geometry('600x600')
 
 
 
-def showMessage():
+def onClick():
 
 
     label = Label(text="Please enter your name ")
+
     label.pack()
     entry = Entry()
     entry.focus_set()
@@ -29,11 +30,10 @@ def showMessage():
 
 
 
-button = tkinter.Button(home, text="create account", command = showMessage())
+button = tkinter.Button(home, text="create account", command = lambda: onClick())
 
 
 button.pack()
 
 
 home.mainloop()
-
