@@ -27,15 +27,15 @@ class Graph(object):
                 def getLabel(self):
                         return self._label 
     
-        def Graph(self):
+        def __init__(self):
                 self._nodes = []
                 
                 
-                def Traverse(self):
-                    pass
+        def Traverse(self):
+                pass
                 
-                def insert(self,n):
-                    pass 
+        def insert(self,n):
+                pass 
         
         
         
