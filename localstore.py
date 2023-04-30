@@ -13,7 +13,8 @@ class NodeBody:
     name: str
     type: nodetype
     IP: str
-    magnitudes: dict
+    supply: dict
+    demand: dict
     neighbors: list
 
 #TODO: incorporate private key signing into this data class
