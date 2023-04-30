@@ -3,7 +3,7 @@ from .localstore import NodeBody
 class Graph(object):
         class Node(object): #the graph is made up of nodes so we aren't going to want nodes outside of the graph anyway
             
-                def Node(self, body: NodeBody):
+                def __init__(self, body: NodeBody):
                         self._body = body
 
                 def getSupply(self):
@@ -27,15 +27,15 @@ class Graph(object):
                 def getLabel(self):
                         return self._label 
     
-        def Graph(self):
-                self._nodes = []
+        def __init__(self):
+               self._nodes = []
                 
                 
-                def Traverse(self):
-                    pass
+        def Traverse(self):
+             pass
                 
-                def insert(self,n):
-                    pass 
+         def insert(self,n):
+              pass 
         
         
         
