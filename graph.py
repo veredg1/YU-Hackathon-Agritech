@@ -1,36 +1,17 @@
-import rsa
-import networkx
+from .localstore import NodeBody
+
 class Graph(object):
         class Node(object): #the graph is made up of nodes so we aren't going to want nodes outside of the graph anyway
             
-                def Node(self, name,label,supply,demand):
-                        self._name = name  #name of the connection
-                        self._label = label #is it a producer or a supplier? 
-                        self._neighbors = [None] 
-                        self._supply = supply
-                        self._demand = demand 
-                        self._privateKey = 0
-                        self._publicKey = 0 #default values for now
-        
-        
-        
+                def Node(self, body: NodeBody):
+                        self._body = body
+
                 def getSupply(self):
-                        return self._supply
-        
+                        return self._body.supply
         
                 def getDemand(self):
-                        return self._demand
+                        return self._body.demand
         
-        
-        
-                def changeSupply(self):
-                        self._supply = input()
-        
-        
-                def changeDemand(self):
-                        self._demand = input()
-        
-                
                 def addEdge(self,n):
                         pass 
         
@@ -45,12 +26,6 @@ class Graph(object):
         
                 def getLabel(self):
                         return self._label 
-           
-   
-
-
-    
- 
     
         def Graph(self):
                 self._nodes = []
