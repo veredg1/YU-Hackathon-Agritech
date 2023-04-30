@@ -26,6 +26,16 @@ class Graph(object):
         
                 def getLabel(self):
                         return self._label 
+                
+                def changeLabel(self):
+                        self._label = input("enter s if supplier, enter p if producer, enter c if consumer ")
+
+                def changeSupply(self):
+                        self._body.supply[input("name of what you have to offer?")] = input("quantity")
+
+
+                def changeDemand(self):
+                        self._body.supply[input("name of what you need?")] = input("quantity")
     
         def __init__(self):
                 self._nodes = []
