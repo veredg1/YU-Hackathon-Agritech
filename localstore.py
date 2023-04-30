@@ -17,7 +17,7 @@ class NodeBody:
     demand: dict = {}
     neighbors: list = []
     crypto: bytes = bytes(name, "utf-8")
-    public_key: rsa.key.PublicKey
+    public_key: rsa.key.PublicKey = rsa.newkeys()
 
     def addNeighbor(self, IP: str):
         self.crypto = handshake(IP, self.crypto)
@@ -25,4 +25,4 @@ class NodeBody:
 
 
 
-#TODO: incorporate private key signing into this data class
+#TODO: incorporate private key signing into this data class and make it work
