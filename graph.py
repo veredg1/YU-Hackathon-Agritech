@@ -17,7 +17,7 @@ class Graph(object):
         
                 def getNeighbors(self): 
                         returnVal = []
-                        for v in self._neighbors:
+                        for v in self._body.neighbors:
                                 if v._label != self._label:
                                         returnVal += [v._label]
             

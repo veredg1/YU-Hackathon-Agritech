@@ -10,11 +10,11 @@ class nodetype(Enum):
 #magnitudes are how much of each type of produce each node needs/produces
 @dataclass
 class NodeBody:
-    name: str
-    type: nodetype
-    IP: str
-    supply: dict
-    demand: dict
-    neighbors: list
+    name: str = "defaultname"
+    type: nodetype = nodetype.PRODUCER
+    IP: str = "192.168.1.1"
+    supply: dict = {}
+    demand: dict = {}
+    neighbors: list = []
 
 #TODO: incorporate private key signing into this data class
