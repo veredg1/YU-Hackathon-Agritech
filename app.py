@@ -1,15 +1,39 @@
 import tkinter
 from tkinter import Tk
+from tkinter import *
 
-from graph import Graph
-from graph import NodeBody
-from localstore import NodeBody
+home: Tk = tkinter.Tk()
+home.title("Home Page")
+home.geometry('600x600')
 
 
-top: Tk = tkinter.Tk()
-Graph = Graph()
-start = tkinter.Button(top, text= "create account", command = Graph.insert(NodeBody( 'ip',1, dict(), dict(), list, list )))
-start.pack()
 
-start.mainloop()
-top.mainloop()
+def showMessage():
+
+
+    label = Label(text="Please enter your name ")
+    label.pack()
+    entry = Entry()
+    entry.focus_set()
+    entry.pack()
+    entry.get()
+
+    label = Label(text="suppliers enter 0, producers enter 1, consumers enter 2 ")
+    label.pack()
+    entry = Entry()
+    entry.focus_set()
+    entry.pack()
+    entry.get
+
+
+
+
+
+button = tkinter.Button(home, text="create account", command = showMessage())
+
+
+button.pack()
+
+
+home.mainloop()
+
