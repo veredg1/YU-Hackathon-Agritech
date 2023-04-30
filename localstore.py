@@ -14,6 +14,6 @@ class NodeBody:
     type: nodetype
     IP: str
     magnitudes: dict
+    neighbors: list
 
 #TODO: incorporate private key signing into this data class
-
