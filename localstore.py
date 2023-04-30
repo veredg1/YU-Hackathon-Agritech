@@ -1,7 +1,9 @@
+#stores the local user data 
+
 from dataclasses import dataclass
 from enum import Enum
 
-#three possibilities for what type of node each user is
+#three possibilities for what type of node each user is. 
 class nodetype(Enum):
     PRODUCER = 0
     SUPPLIER = 1
